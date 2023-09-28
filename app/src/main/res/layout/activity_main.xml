@@ -11,26 +11,31 @@
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
             android:orientation="vertical">
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#FFAAAA">
 
                 <TextView
-                    android:id="@+id/display"
+                    android:id="@+id/display2"
                     android:layout_width="wrap_content"
-                    android:layout_height="35dp"
+                    android:layout_height="20dp"
                     android:gravity="right"
-                    android:visibility="visible"
-                    tools:visibility="visible" />
-            </LinearLayout>
+                    android:background="#808080"
+                    android:textColor="@color/black"
+                    android:paddingBottom="5dp"/>
+                <TextView
+                    android:id="@+id/display1"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="#FFAAAA"
+                    android:gravity="right"
+                    android:textSize="30dp"
+                    android:textColor="@color/black" />
+
 
             <LinearLayout
                 android:paddingTop="20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
                 <Button
-                    android:id="@+id/Clear"
+                    android:onClick="ClickC"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="C"/>
@@ -38,17 +43,17 @@
                     android:id="@+id/MemoryClear"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="CM"/>
+                    android:text=""/>
                 <Button
                     android:id="@+id/MemorySave"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="MS"/>
+                    android:text=""/>
                 <Button
                     android:id="@+id/MemoryRemove"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="MR"/>
+                    android:text=""/>
 
             </LinearLayout>
 

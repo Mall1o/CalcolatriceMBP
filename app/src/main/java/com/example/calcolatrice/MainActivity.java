@@ -11,7 +11,6 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     private TextView Display1,Display2;
-    String num;
     char op;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,11 +21,11 @@ public class MainActivity extends AppCompatActivity {
     }
     public void ClickNumber(View v){
         Button b = (Button) v;
-        num = Display1.getText().toString() + b.getText().toString();
-        Display1.setText(num);
+        Display1.setText(Display1.getText().toString() + b.getText().toString());
     }
     public void ClickC(View v){
         Display1.setText("");
+        Display2.setText("");
     }
     public void ClickOp(View v){
         Button b = (Button) v;
@@ -34,17 +33,25 @@ public class MainActivity extends AppCompatActivity {
         Display2.setText(Display1.getText().toString() + op);
         Display1.setText("");
     }
-
     public void ClickEqual(View v){
+        int res = 0;
+        int num1 = Integer.parseInt(Display1.getText().toString());
+        String str = Display2.getText().toString();
+        str = str.substring(0,str.length()-1);
+        int num2 = Integer.parseInt(str);
         switch (op){
             case '+':
+                res = num1 + num2;
                 break;
             case '-':
                 break;
             case '*':
                 break;
-
+            case '/':
+                break;
 
         }
+        Display1.setText(Integer.toString(res));
+        Display2.setText("");
     }
 }

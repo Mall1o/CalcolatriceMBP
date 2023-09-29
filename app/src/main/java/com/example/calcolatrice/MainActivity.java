@@ -37,6 +37,13 @@ public class MainActivity extends AppCompatActivity {
 
     public void ClickEqual(View v){
         switch (op){
+            case '+':
+                break;
+            case '-':
+                break;
+            case '*':
+                break;
+
 
         }
     }
